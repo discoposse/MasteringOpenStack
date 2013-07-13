@@ -2,7 +2,7 @@
 export DEBIAN_FRONTEND=noninteractive
 
 export MYSQL_ROOT_PASS=openstack
-export MYSQL_HOST=127.0.0.1
+export MYSQL_HOST=0.0.0.0
 export MYSQL_PASS=openstack
 
 echo "mysql-server-5.5 mysql-server/root_password password $MYSQL_ROOT_PASS" | sudo debconf-set-selections
