@@ -51,14 +51,14 @@ keystone role-create --name admin
 # Member role
 keystone role-create --name Member
 
-keystone tenant-create --name cookbook --description "Default Cookbook Tenant" --enabled true
+keystone tenant-create --name mastering --description "Default Mastering OpenStack Tenant" --enabled true
 
-TENANT_ID=$(keystone tenant-list | awk '/\ cookbook\ / {print $2}')
+TENANT_ID=$(keystone tenant-list | awk '/\ mastering\ / {print $2}')
 
 export PASSWORD=openstack
 keystone user-create --name admin --tenant_id $TENANT_ID --pass $PASSWORD --email root@localhost --enabled true
 
-TENANT_ID=$(keystone tenant-list | awk '/\ cookbook\ / {print $2}')
+TENANT_ID=$(keystone tenant-list | awk '/\ mastering\ / {print $2}')
 
 ROLE_ID=$(keystone role-list | awk '/\ admin\ / {print $2}')
 
@@ -70,13 +70,13 @@ keystone user-role-add --user $USER_ID --role $ROLE_ID --tenant_id $TENANT_ID
 PASSWORD=openstack
 keystone user-create --name demo --tenant_id $TENANT_ID --pass $PASSWORD --email demo@localhost --enabled true
 
-TENANT_ID=$(keystone tenant-list | awk '/\ cookbook\ / {print $2}')
+TENANT_ID=$(keystone tenant-list | awk '/\ mastering\ / {print $2}')
 
 ROLE_ID=$(keystone role-list | awk '/\ Member\ / {print $2}')
 
 USER_ID=$(keystone user-list | awk '/\ demo\ / {print $2}')
 
-# Assign the Member role to the demo user in cookbook
+# Assign the Member role to the demo user in mastering
 keystone user-role-add --user $USER_ID --role $ROLE_ID --tenant_id $TENANT_ID
 
 # OpenStack Compute Nova API Endpoint
