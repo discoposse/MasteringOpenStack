@@ -2,3 +2,6 @@ export ENDPOINT=127.0.0.1
 export SERVICE_TOKEN=ADMIN
 export SERVICE_ENDPOINT=http://${ENDPOINT}:35357/v2.0
 export OS_AUTH_URL="http://localhost:5000/v2.0/"
+export OS_TENANT_NAME=admin
+export OS_USERNAME=admin
+export OS_PASSWORD=openstack
