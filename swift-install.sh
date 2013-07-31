@@ -1,7 +1,8 @@
+# Create a physical volume for use later
 pvcreate /dev/sdb
 
 # Install some packages:
-sudo apt-get -y install swift swift-proxy swift-account swift-container swift-object memcached xfsprogs curl python-webob
+sudo apt-get -y install swift swift-proxy swift-account swift-container swift-object memcached xfsprogs curl python-webob python-swiftclient
 sudo service ntp restart
 
 # Create signing directory & Set owner to swift
