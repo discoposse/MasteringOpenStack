@@ -10,7 +10,7 @@ sudo apt-get install -y cinder-api cinder-scheduler cinder-volume open-iscsi isc
 
 sudo rabbitmqctl change_password guest password
 
-sudo sed-i 's/false/true/g' /etc/default/iscsitarget
+sudo sed -i 's/false/true/g' /etc/default/iscsitarget
 service iscsitarget start
 service open-iscsi start
 
