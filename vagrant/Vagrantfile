@@ -12,8 +12,8 @@ Vagrant::Config.run do |config|
 
     controller_config.vm.box_url = "http://files.vagrantup.com/precise64.box"
 
-    controller_config.vm.network :hostonly, "172.16.0.201", :netmask => "255.255.0.0"
-    controller_config.vm.network :hostonly, "10.5.5.201"
+    controller_config.vm.network :hostonly, "172.16.10.200", :netmask => "255.255.0.0"
+    controller_config.vm.network :hostonly, "10.5.5.200"
 
     # Customise the VM virtual hardware
     controller_config.vm.customize ["modifyvm", :id, "--memory", 2048]

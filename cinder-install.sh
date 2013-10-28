@@ -15,8 +15,6 @@ service iscsitarget start
 service open-iscsi start
 
 
-
-
 #
 sudo sed -i 's#^connection.*#connection = mysql://cinder:openstack@127.0.0.1/cinder#' /etc/cinder/cinder.conf
 # add the rabbit_password line

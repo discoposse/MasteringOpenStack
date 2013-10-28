@@ -12,10 +12,10 @@ echo "mysql-server-5.5 mysql-server/root_password_again seen true" | sudo debcon
         
 sudo apt-get update
 sudo apt-get install -y ubuntu-cloud-keyring
-sudo echo "deb http://ubuntu-cloud.archive.canonical.com/ubuntu precise-updates/grizzly main" | sudo tee /etc/apt/sources.list.d/grizzly.list
+sudo echo "deb http://ubuntu-cloud.archive.canonical.com/ubuntu precise-updates/havana main" | sudo tee /etc/apt/sources.list.d/havana.list
 sudo apt-get install python-software-properties -y
-sudo add-apt-repository -y ppa:openstack-ubuntu-testing/grizzly-trunk-testing
-sudo add-apt-repository -y ppa:openstack-ubuntu-testing/grizzly-build-depends
+# sudo add-apt-repository -y ppa:openstack-ubuntu-testing/grizzly-trunk-testing
+# sudo add-apt-repository -y ppa:openstack-ubuntu-testing/grizzly-build-depends
 sudo apt-get update && apt-get upgrade -y
 
 sudo apt-get -y install mysql-server python-mysqldb
