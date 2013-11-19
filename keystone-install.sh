@@ -41,8 +41,8 @@ sudo keystone-manage db_sync
 
 sudo apt-get -y install python-keystoneclient
 
-export CONTROLLER_HOST=172.16.10.200
-export KEYSTONE_ENDPOINT=172.16.10.200
+export CONTROLLER_HOST=172.16.0.200
+export KEYSTONE_ENDPOINT=172.16.0.200
 export GLANCE_HOST=${CONTROLLER_HOST}
 export MYSQL_HOST=${CONTROLLER_HOST}
 export KEYSTONE_ENDPOINT=${CONTROLLER_HOST}
